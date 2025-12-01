@@ -1,0 +1,3 @@
+event.dataset : "ssh" and event.action : "failed-password" 
+| stats count by source.ip 
+| where count > 10

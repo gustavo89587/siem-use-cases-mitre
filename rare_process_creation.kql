@@ -1,0 +1,4 @@
+DeviceProcessEvents
+| summarize count() by FileName
+| where count_ < 5
+| extend MITRE="T1059 - Command and Scripting Interpreter"

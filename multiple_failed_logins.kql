@@ -1,0 +1,5 @@
+SigninLogs
+| where ResultType != 0
+| summarize FailedCount = count() by UserPrincipalName, IPAddress
+| where FailedCount > 10
+| extend ATTACK="Brute Force (T1110)"

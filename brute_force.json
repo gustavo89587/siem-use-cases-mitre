@@ -1,0 +1,10 @@
+{
+    "technique": "T1110",
+    "tactic": "Credential Access",
+    "description": "Adversaries attempt multiple passwords to gain access.",
+    "datasources": [
+        "Authentication logs",
+        "Network traffic",
+        "Endpoint logs"
+    ]
+}

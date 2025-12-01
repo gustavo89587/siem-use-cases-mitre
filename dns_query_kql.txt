@@ -1,0 +1,1 @@
+dns.question.name : "*.xyz*" and dns.question.name : "*base64*"

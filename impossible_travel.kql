@@ -1,0 +1,8 @@
+SigninLogs
+| extend Timestamp = TimeGenerated
+| summarize first_ip = arg_min(Timestamp, IPAddress),
+           last_ip  = arg_max(Timestamp, IPAddress)
+         by UserPrincipalName
+| extend TravelDistance = geo_distance_2points(first_ip, last_ip)
+| where TravelDistance > 5000
+| extend MITRE = "T1078 - Valid Accounts"

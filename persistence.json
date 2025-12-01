@@ -1,0 +1,9 @@
+{
+    "technique": "T1053",
+    "tactic": "Persistence",
+    "description": "Scheduled tasks for persistence.",
+    "datasources": [
+        "Process creation",
+        "Task scheduler logs"
+    ]
+}

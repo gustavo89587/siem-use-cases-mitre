@@ -1,0 +1,5 @@
+index=auth OR index=windows
+| stats count by src_ip, user, action
+| where action="failed" AND count > 10
+| eval severity="medium"
+| eval mitre="T1110 - Brute Force"

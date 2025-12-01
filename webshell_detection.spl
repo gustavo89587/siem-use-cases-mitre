@@ -1,0 +1,3 @@
+index=web
+| search uri="*shell*" OR uri="*.php?cmd=*"
+| eval mitre="Webshell - T1505"

@@ -1,0 +1,4 @@
+index=dns
+| stats count, values(query) as queries by src_ip
+| where count > 100 AND mvfind(queries, "[a-zA-Z0-9]{40,}")!=-1
+| eval technique="Exfiltration - T1048"

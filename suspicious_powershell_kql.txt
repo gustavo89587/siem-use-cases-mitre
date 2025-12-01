@@ -1,0 +1,2 @@
+process.command_line : "*EncodedCommand*" 
+OR process.command_line : "*Bypass*" 
