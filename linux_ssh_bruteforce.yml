@@ -1,0 +1,11 @@
+title: Linux SSH Brute Force
+logsource:
+  product: linux
+  service: auth
+detection:
+  selection:
+    message|contains: "Failed password"
+  condition: selection
+level: medium
+tags:
+  - attack.t1110

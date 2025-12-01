@@ -1,0 +1,18 @@
+title: Suspicious PowerShell Execution
+id: powershell-suspicious-001
+status: experimental
+description: Detects common malicious PowerShell parameters.
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    CommandLine|contains:
+      - "EncodedCommand"
+      - "Bypass"
+  condition: selection
+fields:
+  - CommandLine
+level: high
+tags:
+  - attack.t1059.001

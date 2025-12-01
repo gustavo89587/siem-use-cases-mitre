@@ -1,0 +1,15 @@
+title: LSASS Memory Dump
+id: credential-access-002
+status: stable
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    CommandLine|contains:
+      - "procdump"
+      - "lsass"
+  condition: selection
+level: critical
+tags:
+  - attack.t1003
